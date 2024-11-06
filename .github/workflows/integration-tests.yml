@@ -48,7 +48,7 @@ jobs:
       shell: bash
 
     - name: Upload exported crashdumps
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: exported-linux-crashdumps
         path: output/exported_crashdumps.tar.gz
@@ -63,7 +63,7 @@ jobs:
 
     steps:
     - name: Download exported Linux crashdumps
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: exported-linux-crashdumps
         path: ${{ runner.temp }}
